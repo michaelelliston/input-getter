@@ -15,13 +15,21 @@ class InputGetterTest {
             String actual = userInput.trim();
             if (actual.isEmpty()) {
                 System.err.println("Please enter your input.");
-                break;
+
             }
             assertEquals(expected, actual);
             System.out.println(actual);
             break;
         }
-
     }
 
+    @Test
+    public void test_run_getString_method() {
+        String expected = "This is a test";
+
+        String actual = InputGetter.getString("Please enter \"This is a test\"");
+
+        assertEquals(expected, actual);
+        System.out.println(actual);
+    }
 }

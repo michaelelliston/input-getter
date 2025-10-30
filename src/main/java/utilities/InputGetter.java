@@ -12,7 +12,7 @@ public class InputGetter {
             if (!userInput.isEmpty()) {
                 return userInput;
             }
-            System.err.println("Please enter your input.");
+            System.err.println("\nPlease enter your input.\n");
         }
     }
 
@@ -22,7 +22,7 @@ public class InputGetter {
             try {
                 return Integer.parseInt(myScanner.nextLine().trim());
             } catch (NumberFormatException e) {
-                System.err.println("Invalid input. Please only enter the number values you wish to input (ex: 73).\n");
+                System.err.println("\nInvalid input. Please only enter the number values you wish to input (ex: 73).\n");
             }
         }
     }
@@ -33,7 +33,7 @@ public class InputGetter {
             try {
                 return Float.parseFloat(myScanner.nextLine().trim());
             } catch (NumberFormatException e) {
-                System.err.println("Invalid input. Please only enter the number and decimal values you wish to input (ex: 3.14).\n");
+                System.err.println("\nInvalid input. Please only enter the number and decimal values you wish to input (ex: 3.14).\n");
             }
         }
     }
@@ -44,7 +44,7 @@ public class InputGetter {
             try {
                 return Double.parseDouble(myScanner.nextLine().trim());
             } catch (NumberFormatException e) {
-                System.err.println("Invalid input. Please only enter the number and decimal values you wish to input (ex: 73 or 3.14).\n");
+                System.err.println("\nInvalid input. Please only enter the number and decimal values you wish to input (ex: 73 or 3.14).\n");
             }
         }
     }
@@ -55,7 +55,7 @@ public class InputGetter {
             try {
                 return myScanner.nextLine().trim().charAt(0);
             } catch (IndexOutOfBoundsException e) {
-                System.err.println("Invalid input. Please enter only a single character.\n");
+                System.err.println("\nInvalid input. Please enter only a single character.\n");
             }
         }
     }
@@ -69,7 +69,7 @@ public class InputGetter {
             } else if (userInput.equals("false") || userInput.equals("f") || userInput.equals("no") || userInput.equals("n")) {
                 return false;
             } else {
-                System.err.println("Invalid input; please enter a valid response (true / false).\n");
+                System.err.println("\nInvalid input; please enter a valid response (true / false).\n");
             }
         }
     }
