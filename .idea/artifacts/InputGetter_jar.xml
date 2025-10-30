@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="InputGetter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/InputGetter_jar</output-path>
+    <root id="archive" name="InputGetter.jar">
+      <element id="module-output" name="InputGetter" />
+    </root>
+  </artifact>
+</component>
