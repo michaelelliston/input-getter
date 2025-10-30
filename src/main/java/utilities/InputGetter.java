@@ -6,13 +6,19 @@ public class InputGetter {
     private static final Scanner myScanner = new Scanner(System.in);
 
     public static String getString(String prompt) {
-        System.out.println(prompt);
-        return myScanner.nextLine().trim();
+        while (true) {
+            System.out.print(prompt);
+            String userInput = myScanner.nextLine().trim();
+            if (!userInput.isEmpty()) {
+                return userInput;
+            }
+            System.err.println("Please enter your input.");
+        }
     }
 
     public static int getInt(String prompt) {
         while (true) {
-            System.out.println(prompt);
+            System.out.print(prompt);
             try {
                 return Integer.parseInt(myScanner.nextLine().trim());
             } catch (NumberFormatException e) {
@@ -23,7 +29,7 @@ public class InputGetter {
 
     public static float getFloat(String prompt) {
         while (true) {
-            System.out.println(prompt);
+            System.out.print(prompt);
             try {
                 return Float.parseFloat(myScanner.nextLine().trim());
             } catch (NumberFormatException e) {
@@ -34,7 +40,7 @@ public class InputGetter {
 
     public static double getDouble(String prompt) {
         while (true) {
-            System.out.println(prompt);
+            System.out.print(prompt);
             try {
                 return Double.parseDouble(myScanner.nextLine().trim());
             } catch (NumberFormatException e) {
@@ -45,7 +51,7 @@ public class InputGetter {
 
     public static char getChar(String prompt) {
         while (true) {
-            System.out.println(prompt);
+            System.out.print(prompt);
             try {
                 return myScanner.nextLine().trim().charAt(0);
             } catch (IndexOutOfBoundsException e) {
@@ -56,7 +62,7 @@ public class InputGetter {
 
     public static boolean getBoolean(String prompt) {
         while (true) {
-            System.out.println(prompt);
+            System.out.print(prompt);
             String userInput = myScanner.nextLine().trim().toLowerCase();
             if (userInput.equals("true") || userInput.equals("t") || userInput.equals("yes") || userInput.equals("y")) {
                 return true;
@@ -66,5 +72,9 @@ public class InputGetter {
                 System.err.println("Invalid input; please enter a valid response (true / false).\n");
             }
         }
+    }
+
+    public static void closeScanner() {
+        myScanner.close();
     }
 }
