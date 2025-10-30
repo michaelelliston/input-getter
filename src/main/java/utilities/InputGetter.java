@@ -12,7 +12,7 @@ public class InputGetter {
             if (!userInput.isEmpty()) {
                 return userInput;
             }
-            System.err.println("\nPlease enter your input.\n");
+            System.err.println("\nInvalid input. Please enter your input.\n");
         }
     }
 

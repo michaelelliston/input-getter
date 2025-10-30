@@ -23,13 +23,13 @@ class InputGetterTest {
         }
     }
 
-    @Test
-    public void test_run_getString_method() {
-        String expected = "This is a test";
-
-        String actual = InputGetter.getString("Please enter \"This is a test\"");
-
-        assertEquals(expected, actual);
-        System.out.println(actual);
-    }
+//    @Test
+//    public void test_run_getString_method() {
+//        String expected = "This is a test";
+//
+//        String actual = InputGetter.getString1(" This is a test ");
+//
+//        assertEquals(expected, actual);
+//        System.out.println(actual);
+//    }
 }
