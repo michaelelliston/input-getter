@@ -69,7 +69,7 @@ public class InputGetter {
             } else if (userInput.equals("false") || userInput.equals("f") || userInput.equals("no") || userInput.equals("n")) {
                 return false;
             } else {
-                System.err.println("\nInvalid input; please enter a valid response (true / false).\n");
+                System.err.println("\nInvalid input; please enter a valid response (ex: true or false).\n");
             }
         }
     }
